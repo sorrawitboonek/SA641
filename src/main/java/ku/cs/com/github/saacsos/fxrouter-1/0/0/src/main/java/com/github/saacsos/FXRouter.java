@@ -90,38 +90,38 @@ public final class FXRouter {
 
     public static void goTo(String routeLabel) throws IOException {
         RouteScene route = (RouteScene)routes.get(routeLabel);
-        route.previousPage = "";
-        route.currentPage = routeLabel;
+        //route.previousPage = "";
+        //route.currentPage = routeLabel;
         loadNewRoute(route);
     }
 
     public static void goTo(String routeLabel,String from) throws IOException {
         RouteScene route = (RouteScene)routes.get(routeLabel);
-        route.previousPage = from;
-        route.currentPage = routeLabel;
+        //route.previousPage = from;
+        //route.currentPage = routeLabel;
         loadNewRoute(route);
     }
 
     public static void goTo(String routeLabel, Object data) throws IOException {
         RouteScene route = (RouteScene)routes.get(routeLabel);
-        route.previousPage = "";
-        route.currentPage = routeLabel;
+        //route.previousPage = "";
+        //route.currentPage = routeLabel;
         route.data = data;
         loadNewRoute(route);
     }
 
     public static void goTo(String routeLabel,String from, Object data) throws IOException {
         RouteScene route = (RouteScene)routes.get(routeLabel);
-        route.previousPage = from;
-        route.currentPage = routeLabel;
+        //route.previousPage = from;
+        //route.currentPage = routeLabel;
         route.data = data;
         loadNewRoute(route);
     }
 
     public static void goTo(String routeLabel, Object data, Object data2) throws IOException {
         RouteScene route = (RouteScene)routes.get(routeLabel);
-        route.previousPage = "";
-        route.currentPage = routeLabel;
+        //route.previousPage = "";
+        //route.currentPage = routeLabel;
         route.data = data;
         route.data2 = data2;
         loadNewRoute(route);
@@ -129,8 +129,8 @@ public final class FXRouter {
 
     public static void goTo(String routeLabel,String from, Object data, Object data2) throws IOException {
         RouteScene route = (RouteScene)routes.get(routeLabel);
-        route.previousPage = from;
-        route.currentPage = routeLabel;
+        //route.previousPage = from;
+        //route.currentPage = routeLabel;
         route.data = data;
         route.data2 = data2;
         loadNewRoute(route);

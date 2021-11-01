@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.fxml.Product">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.ProductController">
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #ff6961;">
          <children>
@@ -30,7 +29,7 @@
                <items>
                   <MenuItem mnemonicParsing="false">
                      <graphic>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleSignOutButton" prefWidth="100.0" style="-fx-background-color: transparent;" text="Sign out" />
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleLogoutButton" prefWidth="100.0" style="-fx-background-color: transparent;" text="Logout" />
                      </graphic>
                   </MenuItem>
                </items>

@@ -1,12 +1,10 @@
 package ku.cs.controllers;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import ku.cs.model.Userlist;
 import ku.cs.service.UserHardcodeDataSource;
+import com.github.saacsos.FXRouter;
 
 import java.io.IOException;
 
@@ -43,6 +41,25 @@ public class LoginController {
 
     @FXML
     void handleLoginButton() {
-
+        if (userNameTextField.getText().equals("Admin")) {
+            users.login(userNameTextField.getText(), userPasswordField.getText());
+            try {
+                FXRouter.goTo("sales");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if(users.login(userNameTextField.getText(),userPasswordField.getText())) {
+            try {
+                FXRouter.goTo("product");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else{
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("");
+            alert.setHeaderText("Invalid Username or Password ");
+            alert.setContentText("Please input valid username or password");
+            alert.showAndWait();
+        }
     }
 }
