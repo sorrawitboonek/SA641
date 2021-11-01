@@ -15,7 +15,7 @@
             <Image url="@../image-sa641/images.png" />
          </image>
       </ImageView>
-      <Button layoutX="360.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleStartButton" prefHeight="40.0" prefWidth="80.0" style="-fx-background-radius: 100; -fx-background-color: grey;" text="Start">
+      <Button layoutX="360.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleStartButton" prefHeight="40.0" prefWidth="80.0" style="-fx-background-radius: 100; -fx-background-color: #ff6961;" text="Start">
          <font>
             <Font size="18.0" />
          </font>

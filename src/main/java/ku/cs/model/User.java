@@ -10,5 +10,11 @@ public class User {
         this.userPassword = userPassword;
     }
 
+    public boolean checkUserName(String userName){
+        return this.userName.equals(userName);
+    }
 
+    public boolean checkUserPassword(String userPassword){
+        return this.userPassword.equals(userPassword);
+    }
 }

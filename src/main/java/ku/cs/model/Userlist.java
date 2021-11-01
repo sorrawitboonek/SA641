@@ -18,4 +18,14 @@ public class Userlist {
     public User getUser() {
         return user;
     }
+
+    public boolean login(String username, String password){
+        for(User user: users){
+            if(user.checkUserName(username) && user.checkUserPassword(password)){
+                this.user = user;
+                return true;
+            }
+        }user = null;
+        return false;
+    }
 }

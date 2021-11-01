@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ku.cs.controllers.LoginController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.LoginController">
+   <children>
+      <AnchorPane fx:id="signinAnchorPane" layoutX="300.0" maxWidth="500.0" prefHeight="600.0" prefWidth="500.0">
+         <children>
+            <Button fx:id="goSignupButton" alignment="BASELINE_LEFT" layoutX="290.0" layoutY="400.0" mnemonicParsing="false" onAction="#handleGoRegisterButton" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="Register" textAlignment="CENTER" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <PasswordField fx:id="userPasswordField" layoutX="100.0" layoutY="250.0" prefHeight="50.0" prefWidth="300.0" promptText="Password" />
+            <TextField fx:id="userNameTextField" layoutX="100.0" layoutY="180.0" prefHeight="50.0" prefWidth="300.0" promptText=" Username" />
+            <Button fx:id="signinUserButton" layoutX="210.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleLoginButton" prefHeight="40.0" prefWidth="80.0" style="-fx-background-radius: 100; -fx-background-color: ff6961;" text="login" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label alignment="CENTER" layoutX="200.0" layoutY="80.0" prefHeight="40.0" prefWidth="100.0" text="Login">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="signupLabel" alignment="BASELINE_LEFT" layoutX="140.0" layoutY="400.0" prefHeight="30.0" prefWidth="160.0" text="if you don't have an account," />
+         </children>
+      </AnchorPane>
+      <Pane prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #ff6961;" />
+   </children>
 </AnchorPane>

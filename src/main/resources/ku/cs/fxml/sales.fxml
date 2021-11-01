@@ -1,14 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ku.cs.fxml.Sales"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.fxml.Sales">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #ff6961;">
+         <children>
+            <Button mnemonicParsing="false" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image-sa641/images.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            <MenuButton fx:id="userMenuButton" mnemonicParsing="false" prefHeight="60.0" style="-fx-background-color: transparent; -fx-background-radius: 100;" text="username" textFill="#070a06">
+               <items>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleSignOutButton" prefWidth="100.0" style="-fx-background-color: transparent;" text="Sign out" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+               <graphic>
+                  <ImageView fx:id="userImageView" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image-sa641/defaultUser.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="590.0" />
+               </HBox.margin>
+            </MenuButton>
+         </children>
+         <opaqueInsets>
+            <Insets left="10.0" />
+         </opaqueInsets>
+      </HBox>
+      <Label layoutX="55.0" layoutY="64.0" prefHeight="15.0" prefWidth="36.0" text="Sales" />
+      <ScrollPane layoutX="25.0" layoutY="90.0" prefHeight="500.0" prefWidth="755.0">
+         <content>
+            <VBox fx:id="orderVbox" prefWidth="750.0" />
+         </content>
+      </ScrollPane>
+   </children>
 </AnchorPane>

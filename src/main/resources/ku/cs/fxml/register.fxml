@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.RegisterController">
+   <children>
+      <AnchorPane fx:id="signupAnchorPane" maxWidth="500.0" prefHeight="600.0" prefWidth="500.0">
+         <children>
+            <Label fx:id="signupUserLabel" alignment="CENTER" layoutX="190.0" layoutY="50.0" prefHeight="40.0" prefWidth="120.0" text="Register" textAlignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="goSigninButton" alignment="BASELINE_LEFT" layoutX="290.0" layoutY="490.0" mnemonicParsing="false" onAction="#handleGoLoginButton" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: transparent;" text="Login" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="firstNameTextField" layoutX="100.0" layoutY="120.0" prefHeight="40.0" prefWidth="150.0" promptText="Firstname" />
+            <TextField fx:id="lastNameTextField" layoutX="270.0" layoutY="120.0" prefHeight="40.0" prefWidth="150.0" promptText="Lastname" />
+            <TextField fx:id="usernameTextField" layoutX="100.0" layoutY="180.0" onKeyTyped="#checkUsernameAlreadyUsed" prefHeight="40.0" prefWidth="320.0" promptText="Username" />
+            <PasswordField fx:id="passwordField" layoutX="100.0" layoutY="240.0" onKeyTyped="#checkPasswordMustBeEight" prefHeight="40.0" prefWidth="150.0" promptText="Password" />
+            <PasswordField fx:id="cfPasswordField" layoutX="270.0" layoutY="240.0" onKeyTyped="#checkPasswordIsDifferent" prefHeight="40.0" prefWidth="150.0" promptText="Confirm Password" />
+            <Button fx:id="signupUserButton" disable="true" layoutX="210.0" layoutY="440.0" mnemonicParsing="false" onAction="#handleRegisterButton" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #ff6961; -fx-background-radius: 100;" text="register" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="telTextField" layoutX="300.0" layoutY="300.0" prefHeight="40.0" prefWidth="120.0" promptText="Tel" />
+            <TextField fx:id="emailTextField" layoutX="100.0" layoutY="300.0" prefHeight="40.0" prefWidth="180.0" promptText="E-mail" />
+            <TextField fx:id="shippingAddressTextfield" layoutX="100.0" layoutY="360.0" prefHeight="40.0" prefWidth="320.0" promptText="Shipping Address" />
+            <Label fx:id="ifSignUpLabel" alignment="BASELINE_LEFT" layoutX="130.0" layoutY="490.0" prefHeight="30.0" prefWidth="180.0" text="if you already have an account," />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="500.0" prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #ff6961;" />
+   </children>
+</AnchorPane>

@@ -4,11 +4,11 @@ import ku.cs.model.Customer;
 import ku.cs.model.User;
 import ku.cs.model.Userlist;
 
-public class userHardcodeDataSource {
+public class UserHardcodeDataSource {
 
     private Userlist users;
 
-    public userHardcodeDataSource() {
+    public UserHardcodeDataSource() {
         this.users = new Userlist();
         hardcode();
     }
