@@ -29,7 +29,7 @@
             <TextField fx:id="usernameTextField" layoutX="100.0" layoutY="180.0" onKeyTyped="#checkUsernameAlreadyUsed" prefHeight="40.0" prefWidth="320.0" promptText="Username" />
             <PasswordField fx:id="passwordField" layoutX="100.0" layoutY="240.0" onKeyTyped="#checkPasswordMustBeEight" prefHeight="40.0" prefWidth="150.0" promptText="Password" />
             <PasswordField fx:id="cfPasswordField" layoutX="270.0" layoutY="240.0" onKeyTyped="#checkPasswordIsDifferent" prefHeight="40.0" prefWidth="150.0" promptText="Confirm Password" />
-            <Button fx:id="signupUserButton" disable="true" layoutX="210.0" layoutY="440.0" mnemonicParsing="false" onAction="#handleRegisterButton" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #ff6961; -fx-background-radius: 100;" text="register" textFill="WHITE">
+            <Button fx:id="signupUserButton" disable="false" layoutX="210.0" layoutY="440.0" mnemonicParsing="false" onAction="#handleRegisterButton" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #ff6961; -fx-background-radius: 100;" text="register" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
