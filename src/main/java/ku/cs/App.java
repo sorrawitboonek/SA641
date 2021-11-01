@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import com.github.saacsos.FXRouter;
 
 import java.io.IOException;
 
@@ -12,27 +13,27 @@ import java.io.IOException;
  * JavaFX App
  */
 public class App extends Application {
-
-    private static Scene scene;
-
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
-        stage.setScene(scene);
-        stage.show();
+
+        FXRouter.bind(this, stage, "Italy");
+        configRoute();
+        FXRouter.goTo("main");
     }
 
-    static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
+    private static void configRoute() {
+        String packageStr = "ku/cs/fxml/";
+        FXRouter.when("main", packageStr+"main.fxml");
+        FXRouter.when("login",packageStr+"login.fxml");
+        FXRouter.when("register",packageStr+"register.fxml");
+        FXRouter.when("product",packageStr+"product.fxml");
+        FXRouter.when("sales",packageStr+"sales.fxml");
+        //FXRouter.when("",packageStr+".fxml");
     }
 
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
-    }
-
-    public static void main(String[] args) {
+    public static void main(String[] args){
         launch();
     }
+
 
 }
