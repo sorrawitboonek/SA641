@@ -42,13 +42,21 @@ public class LoginController {
     @FXML
     void handleLoginButton() {
         if (userNameTextField.getText().equals("Admin")) {
-            users.login(userNameTextField.getText(), userPasswordField.getText());
-            try {
-                FXRouter.goTo("sales");
-            } catch (IOException e) {
-                e.printStackTrace();
+            if(users.login(userNameTextField.getText(), userPasswordField.getText())){
+                try {
+                    FXRouter.goTo("sales");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
-        } else if(users.login(userNameTextField.getText(),userPasswordField.getText())) {
+            else{
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("");
+                alert.setHeaderText("Invalid Username or Password ");
+                alert.setContentText("Please input valid username or password");
+                alert.showAndWait();
+            }
+        }else if(users.login(userNameTextField.getText(),userPasswordField.getText())) {
             try {
                 FXRouter.goTo("product");
             } catch (IOException e) {

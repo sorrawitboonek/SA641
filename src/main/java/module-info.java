@@ -1,6 +1,8 @@
 module ku.cs {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
+    requires mysql.connector.java;
 
     opens ku.cs to javafx.fxml;
     exports ku.cs;
